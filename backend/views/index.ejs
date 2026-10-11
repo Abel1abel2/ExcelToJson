@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Converter</title>
+  </head>
+  <body>
+    <form action="/exceltojson" method="post" enctype="multipart/form-data">
+      <label for="file">Upload Excel:</label>
+      <input type="file" name="file" accept=".xlsx" required />
+      <button>Convert to Json</button>
+    </form>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universal Report Excel to JSON Converter</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; }
+        .container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 500px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; }
+        input[type="file"] { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        button { background: #007bff; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Report Converter</h2>
+        <form action="/exceltojson" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="excelFile">Upload Report Excel (.xlsx):</label>
+                <input type="file" name="excelFile" accept=".xlsx" required />
+            </div>
+            <div class="form-group">
+                <label for="templateJson">Upload Template JSON (Dictionary):</label>
+                <input type="file" name="templateJson" accept=".json" required />
+            </div>
+            <button type="submit">Convert & Download JSON</button>
+        </form>
+    </div>
+</body>
+</html>
